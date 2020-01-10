@@ -29,4 +29,7 @@ function mapStateToProps(state) {
 }
 
 export { loadData };
-export default connect(mapStateToProps, { fetchUsers })(Users);
+export default {
+  loadData,
+  component: connect(mapStateToProps, { fetchUsers })(Users)
+};

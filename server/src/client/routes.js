@@ -3,13 +3,12 @@ import Users, { loadData } from './pages/Users';
 
 export default [
   {
+    ...Home,
     path: '/',
-    component: Home,
     exact: true
   },
   {
-    path: '/users',
-    component: Users,
-    loadData
+    ...Users,
+    path: '/users'
   }
 ];
